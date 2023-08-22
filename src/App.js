@@ -21,7 +21,8 @@ function App() {
     );
     setLoading(true);
     axios
-      .post("http://localhost:5555/chat", { prompt })
+      // for local ser https://http://localhost:5555/chat
+      .post("https://careerguidebackend.vercel.app/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         setLoading(false);
